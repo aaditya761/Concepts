@@ -11,6 +11,9 @@ this includes the address bar, back/forward button, bookmarking menu, etc. Every
 marshals actions between the UI and the rendering engine.
 * ##### The rendering engine : 
 responsible for displaying requested content. For example if the requested content is HTML, the rendering engine parses HTML and CSS, and displays the parsed content on the screen. By default the rendering engine can display HTML and XML documents and images. It can display other types of data via plug-ins or extension; for example, displaying PDF documents using a PDF viewer plug-in. Different browsers use different rendering engines: Internet Explorer uses Trident, Firefox uses Gecko, Safari uses WebKit. Chrome and Opera (from version 15) use Blink, a fork of WebKit.
+<p align ="center">
+![alt text](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/flow.png)
+  </p>
 * ##### Networking: 
 for network calls such as HTTP requests, using different implementations for different platform behind a platform-independent interface.
 * ##### UI backend: 
@@ -22,5 +25,7 @@ This is a persistence layer. The browser may need to save all sorts of data loca
 
 It is important to note that browsers such as Chrome run multiple instances of the rendering engine: one for each tab. Each tab runs in a separate process.
 
+<p align ="center">
 ![alt text](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/layers.png)
+</p>
 
