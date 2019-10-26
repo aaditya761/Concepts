@@ -26,13 +26,13 @@ It is important to note that browsers such as Chrome run multiple instances of t
 ![alt text](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/layers.png)
 
 
-###Parsing–general
+### Parsing–general
 Parsing a document means translating it to a structure the code can use. The result of parsing is usually a tree of nodes that represent the structure of the document. This is called a parse tree or a syntax tree.
 
-###Grammars
+### Grammars
 Parsing is based on the syntax rules the document obeys: the language or format it was written in. Every format you can parse must have deterministic grammar consisting of vocabulary and syntax rules. It is called a context free grammar. Human languages are not such languages and therefore cannot be parsed with conventional parsing techniques.
 
-###Parser–Lexer combination
+### Parser–Lexer combination
 Parsing can be separated into two sub processes: lexical analysis and syntax analysis.
 
 Lexical analysis is the process of breaking the input into tokens. Tokens are the language vocabulary: the collection of valid building blocks. In human language it will consist of all the words that appear in the dictionary for that language.
@@ -45,53 +45,54 @@ The parsing process is iterative. The parser will usually ask the lexer for a ne
 
 If no rule matches, the parser will store the token internally, and keep asking for tokens until a rule matching all the internally stored tokens is found. If no rule is found then the parser will raise an exception. This means the document was not valid and contained syntax errors.
 
-###Translation
+### Translation
 In many cases the parse tree is not the final product. Parsing is often used in translation: transforming the input document to another format. An example is compilation. The compiler that compiles source code into machine code first parses it into a parse tree and then translates the tree into a machine code document.
 
 
-##HTML Parser
+## HTML Parser
 The job of the HTML parser is to parse the HTML markup into a parse tree.
 
-##DOM
+## DOM
 The output tree (the "parse tree") is a tree of DOM element and attribute nodes. DOM is short for Document Object Model. It is the object presentation of the HTML document and the interface of HTML elements to the outside world like JavaScript.
 The root of the tree is the "Document" object.
 
 https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 
 
-#Event Loop
+
+# Event Loop
 Whenever a browser does a task take takes time, it passes the task to web apis and frees up the stack. When the task is over it gives the result to the task queue. The job of the event loop is to check the items in the stack and the task queue. If the stack is empty, it pushes the first item on the task queue to the stack which effectively runs it.
 
 
 
 Output of following:
-
+```
 console.log('hi');
 setTimeout(function(){
   console.log('there');
 })
 console.log('bye');
+```
 
 
-
-
+```
 while(true){
   console.log('hi');
 }
 setTimeout(funtion(){
   console.log('there');
 })
+```
 
 
 
-
-
+```
 what will happen with following code:
 alert('hi');
 setTimeOut(function(){
   console.log('there');
 }, 5000);
-
+```
 
 
 
