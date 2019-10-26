@@ -57,3 +57,49 @@ The output tree (the "parse tree") is a tree of DOM element and attribute nodes.
 The root of the tree is the "Document" object.
 
 https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
+
+
+#Event Loop
+Whenever a browser does a task take takes time, it passes the task to web apis and frees up the stack. When the task is over it gives the result to the task queue. The job of the event loop is to check the items in the stack and the task queue. If the stack is empty, it pushes the first item on the task queue to the stack which effectively runs it.
+
+
+
+Output of following:
+
+console.log('hi');
+setTimeout(function(){
+  console.log('there');
+})
+console.log('bye');
+
+
+
+
+while(true){
+  console.log('hi');
+}
+setTimeout(funtion(){
+  console.log('there');
+})
+
+
+
+
+
+what will happen with following code:
+alert('hi');
+setTimeOut(function(){
+  console.log('there');
+}, 5000);
+
+
+
+
+
+
+
+
+
+
+
+
