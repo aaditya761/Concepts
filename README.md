@@ -85,13 +85,16 @@ setTimeout(funtion(){
 ```
 
 
-
-```
 what will happen with following code:
+```
 alert('hi');
 setTimeOut(function(){
   console.log('there');
 }, 5000);
+```
+
+```
+typeof null;
 ```
 
 # What happens when you type an URL in the browser and press enter?
