@@ -148,6 +148,12 @@ The browser displays the HTML content in phases. First, it will render the bare 
 
 
 
+# Compile Time Error
+Compile time error is the one in which the program won't compile(syntax errors, variable not defined etc)
+
+# Runtime Errors
+Runtime Errors are those which occur while running a program(index out of range, stack overflow etc)
+
 
 
 
