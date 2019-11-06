@@ -97,6 +97,9 @@ setTimeOut(function(){
 typeof null;
 ```
 
+A setTimeout will happen in atleast the time specified. It will never happen in the time specified but a little bit more. It may take more time depending on the availability of the call stack. 
+
+
 # What happens when you type an URL in the browser and press enter?
 
 ### You type maps.google.com into the address bar of your browser.
