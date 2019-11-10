@@ -158,6 +158,13 @@ Compile time error is the one in which the program won't compile(syntax errors, 
 Runtime Errors are those which occur while running a program(index out of range, stack overflow etc)
 
 
+# Signed Values
+Contains both positive and negative values
+
+# Unsigned Values
+Contains only positive values
+
+Boolean is single bit
 
 
 
