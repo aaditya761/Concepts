@@ -166,6 +166,10 @@ Contains only positive values
 
 Boolean is single bit
 
+# Live Reload Vs Hot Reload
+Live reload is when you make changes to code and the page refreshes and the whole page is reloaded. Hot reload is when only the components you made changes to are reloaded.
+
+
 
 
 
