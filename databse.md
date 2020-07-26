@@ -12,3 +12,16 @@ Disadvantages:
 3)Are not read optimized. Takes a long time if you have to read many values
 4)Relations are not implicit. You can't enforce a foreign key contraint
 5) Joins are hard 
+
+
+
+
+
+MongoDB
+
+SQL              Mongo
+Table            Collection
+Row              Document
+Column           Field
+
+Collection isn't strict about what goes in it.
