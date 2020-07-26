@@ -172,4 +172,19 @@ Live reload is when you make changes to code and the page refreshes and the whol
 
 
 
+# Verical Vs Horizontal Scaling
+
+# Horizontal                                                         # Vartical
+1) Adding more machines as the number of users increase              1) Add a bigger machine as number of users increases
+2) Load balancing is required here                                   2) No load balancing is required
+3) If one machine fails, the request can be redirected to            3) single point of failure. If machine fails - it fails
+other machines    
+4) machines talk to each other over internet so network               4) There is only one machine so it doesnt have to talk to anyone, so fast
+communication is slow
+5)Data may not be consistent as several machines are managing the     5) Data is consistent as only one machine is being used.   
+data                                                                  
+6)  Scales well as we can use any number of machines                  6)  Since we can't have infinetly big machine, we have hardware limitations
+
+
+3rd and 4th point of vertical scaling and 2nd and 5th point of horizontal scaling are used.
 
