@@ -35,3 +35,17 @@ Fetch all data from a collection - db.collectionName.find()
 Find on condition - db.collectionName.find(condition)
 
 example find all where age is greater than 15 - db.myCollection.find({"age":{$gt:15}}) 
+
+
+And condition - db.collectionName.find({condition1, condition2, ...}) example - db.myCollection.find({"name":"aditya", "age":15})
+
+Or Condition - db.collectionName.find({$or: [{condition1, condition2, ...}]}) example - db.myCollection.find({$or:[{"name":"aditya", "age":15}]})
+
+And Or together - db.collectionName.find({andConditions, $or: [{condition1, condition2, ...}]}}) example - db.myCollection.find({"name":"aditya", $or:[{"name":"aditya", "age":15}]})
+
+
+Update data:
+db.collectionName.update(conditions, dataToBeUpdated) example - db.myCollection.update({"_id":2}, {$set:{"lastName":"kumar"}})
+if there are multiple values to be updated - db.myCollection.update({"_id":2}, {$set:{"lastName":"kumar"}, {multi:true}})
+
+
