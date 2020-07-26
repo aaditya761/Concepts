@@ -25,3 +25,13 @@ Row              Document
 Column           Field
 
 Collection isn't strict about what goes in it.
+
+Create database - use databasename. If databse is present, it will use it. Else it will create it.
+Create collection - db.createCollection(CollectionName)
+List all collections - show collections 
+Inset data - db.collectionName.insert(data)
+Insert multiple entries - db.collectionName.insert(array of data)
+Fetch all data from a collection - db.collectionName.find()
+Find on condition - db.collectionName.find(condition)
+
+example find all where age is greater than 15 - db.myCollection.find({"age":{$gt:15}}) 
