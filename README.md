@@ -188,3 +188,14 @@ data
 
 3rd and 4th point of vertical scaling and 2nd and 5th point of horizontal scaling are used.
 
+
+# Event bubbling in Javascript
+Document events or document element events bubble up the DOM tree and trigger event handlers of parents and grand parents.
+Event bubbling provides alternate to handle events
+Focus, scroll and blur don't bubble up
+event.stopPropagation() stops event bubbling
+
+
+
+
+
